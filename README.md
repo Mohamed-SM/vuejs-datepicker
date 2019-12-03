@@ -7,6 +7,8 @@
 
 A datepicker Vue component. Compatible with Vue 2.x
 
+forked from [charliekassel/vuejs-datepicker](https://github.com/charliekassel/vuejs-datepicker)
+
 - [Demo](#demo)
 - [Install](#install)
 - [Usage](#usage)

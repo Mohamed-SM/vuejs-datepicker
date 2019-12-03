@@ -130,7 +130,15 @@ export default {
      * called once the input is blurred
      */
     inputBlurred () {
-      if (this.typeable && isNaN(Date.parse(this.input.value))) {
+      var inputdate = this.input.value
+
+      if (this.format === 'dd/MM/yyyy') {
+        var index = [1, 0, 2]
+        inputdate = index.map(i => this.input.value.split('/')[i])
+        console.log('input date', inputdate)
+      }
+
+      if (this.typeable && isNaN(Date.parse(inputdate))) {
         this.clearDate()
         this.input.value = null
         this.typedDate = null
